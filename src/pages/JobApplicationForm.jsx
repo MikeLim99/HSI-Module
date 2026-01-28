@@ -4,7 +4,7 @@ import React from 'react'
 export default function JobApplicationForm() {
   return (
     <View>
-      <Text>JobApplicationForm</Text>
+      <Text>JobApplicationForm testing</Text>
     </View>
   )
 }
