@@ -3,6 +3,11 @@ import Logo from '../../assets/hsi-logo.png'
 import { useNavigate } from 'react-router-dom';
 
 export default function JobCards({ JobTitle, JobDescription, spans }) {
+    const navigate = useNavigate();
+
+    const handleViewDetails = () => {
+        navigate('/jobdetails/Jobdetails'); 
+    };
 return (
     <>
         <div className='bg-white shadow-md rounded-xl p-4'>

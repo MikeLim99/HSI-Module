@@ -3,7 +3,6 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import DashboardPage from './pages/DashboardPage'
 import DirectoryPage from './pages/DirectoryPage'
-import CareerPage from './pages/CareerPage'
 import TrainingPage from './pages/TrainingPage'
 import AchievementsPage from './pages/AchievementsPage'
 import EventsPage from './pages/EventsPage'
@@ -16,6 +15,8 @@ import MentorshipPage from './pages/MentorshipPage'
 import DocumentsPage from './pages/DocumentsPage'
 import ProfilePage from './pages/ProfilePage'
 import JobApplicationForm from './pages/JobApplicationForm'
+import CareerPage from './pages/CareerPage'
+import Jobdetails from './pages/jobdetails/Jobdetails'
 
 export default function App() {
   return (
@@ -36,7 +37,7 @@ export default function App() {
         <Route path="/documents" element={<DocumentsPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/job-application" element={<JobApplicationForm/>} />
-
+        <Route path="/jobdetails/Jobdetails" element={<Jobdetails />} />
         <Route path="/" element={<Navigate to="/directory" replace />} />
         <Route path="*" element={<Navigate to="/directory" replace />} />
       </Routes>
