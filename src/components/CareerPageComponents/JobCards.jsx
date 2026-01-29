@@ -5,6 +5,20 @@ import { useNavigate } from 'react-router-dom';
 export default function JobCards({ JobTitle, JobDescription, spans }) {
     const navigate = useNavigate();
 
+    const getSpanClasses = (label) => {
+        const normalized = String(label || '').toLowerCase().replace(/[^a-z]/g, '');
+        if (normalized === 'open') {
+            return 'bg-green-100 text-green-700 border-green-300';
+        }
+        if (normalized === 'urgent') {
+            return 'bg-orange-100 text-orange-700 border-orange-300';
+        }
+        if (normalized === 'filled') {
+            return 'bg-red-100 text-red-700 border-red-300';
+        }
+        return 'bg-gray-100 text-gray-700 border-gray-300';
+    };
+
     const handleViewDetails = () => {
         navigate('/jobdetails/Jobdetails'); 
     };
@@ -21,7 +35,12 @@ return (
                     <p className='text-sm italic text-gray-700'>{JobDescription}</p>
                     <div className='gap-2 flex justify-end py-2 flex-wrap pl-1'>
                         {Array.isArray(spans) && spans.map((item, index) => (
-                            <span key={index} className={`border px-5 rounded-lg border-gray-500 max-h-fit`}>{item}</span>
+                            <span
+                                key={index}
+                                className={`border px-5 rounded-lg max-h-fit ${getSpanClasses(item)}`}
+                            >
+                                {item}
+                            </span>
                         ))}
                     </div>
                     <div className='flex justify-end items-center pt-5'>
