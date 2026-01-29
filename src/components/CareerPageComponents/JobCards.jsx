@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Logo from '../../assets/hsi-logo.png'
-import { FiNavigation } from 'react-icons/fi'
+import { useNavigate } from 'react-router-dom';
 
-export default function JobCards({ JobTitle, JobDescription, spans}) {
+export default function JobCards({ JobTitle, JobDescription, spans }) {
 return (
     <>
         <div className='bg-white shadow-md rounded-xl p-4'>
@@ -30,7 +30,7 @@ return (
                 </div>
             </div>
             <div className='w-full flex justify-center px-10'>
-            <a href="#" className='px-2 py-1 border border-gray-300 w-full text-center bg-yellow-500 rounded-lg text-white'>View Job Details</a>
+            <button onClick={handleViewDetails} className='px-2 py-1 border border-gray-300 w-full text-center bg-yellow-500 rounded-lg text-white'>View Job Details</button>
             </div>
         </div>
     </>
