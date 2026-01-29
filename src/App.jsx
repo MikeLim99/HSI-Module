@@ -15,6 +15,7 @@ import AlumniStoriesPage from './pages/announcements/AlumniStoriesPage'
 import MentorshipPage from './pages/MentorshipPage'
 import DocumentsPage from './pages/DocumentsPage'
 import ProfilePage from './pages/ProfilePage'
+import JobApplicationForm from './pages/JobApplicationForm'
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/mentorship" element={<MentorshipPage />} />
         <Route path="/documents" element={<DocumentsPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/job-application" element={<JobApplicationForm/>} />
 
         <Route path="/" element={<Navigate to="/directory" replace />} />
         <Route path="*" element={<Navigate to="/directory" replace />} />
