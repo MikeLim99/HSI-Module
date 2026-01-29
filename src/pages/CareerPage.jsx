@@ -15,7 +15,7 @@ export default function CareerPage() {
       <div className='w-[90%] bg-white rounded-t-xl justify-center items-center flex gap-5 p-5 border-b-2 shadow-md'>
         <div className='relative w-[70%]'>
           <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-          <input className='bg-gray-100 pl-10 p-2 w-full border border-gray-300 rounded-xl focus:outline focus:outline-yellow-400' type="text" placeholder="Search" />      
+          <input className='bg-gray-100 pl-10 p-2 w-full border border-gray-300 rounded-xl focus:outline focus:outline-yellow-400 h-10' type="text" placeholder="Search" />      
         </div>
           <SelectionBox className="w-[30%]" test={[{value: "option1", label: "Newest"}, {value: "option2", label: "Oldest"}]} />                  
       </div>
