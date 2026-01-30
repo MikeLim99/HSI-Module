@@ -34,12 +34,7 @@ export default function CareerPage() {
       <div className='w-[90%] my-5 pt-5'>
         {/* Job Listings will go here */}
         <div className='grid grid-cols-2 gap-x-[50px] gap-y-5'>
-          <JobCards JobTitle={"QA - Intern"} JobDescription={"Learn QA practices under mentor guidance"} spans={["Open", "Full-time"]} />
-          <JobCards JobTitle={"QA - Engineer"} JobDescription={"Ensuring product quality and reliability"} spans={["Open", "Urgent"]}/>
-          <JobCards JobTitle={"Web Developer - Intern"} JobDescription={"Work closely with developers on real-world tasks"} spans={["Open", "Full-time"]}/>
-          <JobCards JobTitle={"Web Developer - Intern"} JobDescription={"Work closely with developers on real-world tasks"} spans={["Closed", "Filled"]}/>
-          <JobCards JobTitle={"Web Developer - Intern"} JobDescription={"Work closely with developers on real-world tasks"} spans={["Open", "Full-time"]}/>
-          <JobCards JobTitle={"Web Developer - Intern"} JobDescription={"Work closely with developers on real-world tasks"} spans={["Open", "Full-time"]}/>
+          <JobCards />
         </div>
       </div>
     </div>
