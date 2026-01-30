@@ -3,8 +3,9 @@ import React from 'react'
 export default function SelectionBox({ test, className }) {
   return (
     <>
+    {/* selection box / dropdowns */}
     <div className='relative w-full'>
-      <select className={`w-[100%] appearance-none  bg-gray-100 pl-3 border border-gray-300 rounded-xl h-10 text-gray-400 ${className}`}>
+      <select className={`focus:outline focus:outline-yellow-400 w-[100%] appearance-none  bg-gray-100 pl-3 border border-gray-300 rounded-xl h-10 text-gray-400 ${className}`}>
           {(test.map((option, index) => (
               <option key={index} value={option.value}>{option.label}</option>
           )))}

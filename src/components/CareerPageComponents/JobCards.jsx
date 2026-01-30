@@ -3,8 +3,13 @@ import Logo from '../../assets/hsi-logo.png'
 import { useNavigate } from 'react-router-dom';
 
 export default function JobCards({ JobTitle, JobDescription, spans }) {
+    //navigation to job details page
     const navigate = useNavigate();
+    const handleViewDetails = () => {
+        navigate('/jobdetails/Jobdetails'); 
+    };
 
+    // color function for spans
     const getSpanClasses = (label) => {
         const normalized = String(label || '').toLowerCase().replace(/[^a-z]/g, '');
         if (normalized === 'open') {
@@ -19,12 +24,12 @@ export default function JobCards({ JobTitle, JobDescription, spans }) {
         return 'bg-gray-100 text-gray-700 border-gray-300';
     };
 
-    const handleViewDetails = () => {
-        navigate('/jobdetails/Jobdetails'); 
-    };
+
+
+
 return (
     <>
-        <div className='bg-white shadow-md rounded-xl p-4'>
+        <div className='bg-white shadow-md rounded-xl p-4 hover:scale-105 transition-transform duration-200'>
             {/* card content */}
             <div className='flex justify-center'>
                 <div className='w-[40%] flex-auto'>
